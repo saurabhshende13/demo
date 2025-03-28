@@ -8,6 +8,9 @@ RUN npm install
 # Copy the rest of the application files
 COPY . .
 
+# Ensure correct permissions
+RUN chmod +x node_modules/.bin/react-scripts
+
 # Build the frontend application
 RUN npm run build
 
